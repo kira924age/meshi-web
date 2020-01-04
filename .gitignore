@@ -1,0 +1,26 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+meshi-web-frontend/node_modules
+meshi-web-frontend/.pnp
+meshi-web-frontend/.pnp.js
+
+# testing
+meshi-web-frontend/coverage
+
+# production
+meshi-web-frontend/build
+
+# misc
+meshi-web-frontend/.DS_Store
+meshi-web-frontend/.env.local
+meshi-web-frontend/.env.development.local
+meshi-web-frontend/.env.test.local
+meshi-web-frontend/.env.production.local
+
+meshi-web-frontend/npm-debug.log*
+meshi-web-frontend/yarn-debug.log*
+meshi-web-frontend/yarn-error.log*
+
+meshi-web-backend/main
+
