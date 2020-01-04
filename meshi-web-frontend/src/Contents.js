@@ -13,8 +13,9 @@ const styles = theme => ({
   },
   menuButton: {
     margin: '10px',
-    backgroundColor: '#24292e',
-    color: '#fff',
+    height: 48,
+    background: 'linear-gradient(45deg, #24292E 30%, #24292F 90%)',
+    color: 'white',
     textTransform: 'none',
   },
   title: {
@@ -57,9 +58,9 @@ class Contents extends React.Component {
         </Typography>
         <div className={classes.center}>
           <Button variant="contained" size='large' className={classes.menuButton} onClick={() => this.handleGetMeshi()}>
-          <Typography>
-            meshiコマンドを叩く
-          </Typography>
+            <Typography>
+              meshiコマンドを叩く
+            </Typography>
           </Button>
         </div>
         <MeshiCard meshi= {this.state.meshi} />
