@@ -29,14 +29,13 @@ class Contents extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      meshi: 'shokujin',
+      meshi: '',
     };
     // This binding is necessary to make `this` work in the callback
     this.handleGetMeshi = this.handleGetMeshi.bind(this);
   }
   handleGetMeshi() {
-    axios
-      .get('/meshi')
+    axios.get('/meshi')
       .then((results) => {
         const data = results.data;
         this.setState(state => ({
