@@ -14,11 +14,11 @@ func main() {
 		r.Get("/", getMeshi) // GET /meshi/
 	})
 
-	http.ListenAndServe(":8080", r)
+	http.ListenAndServe(":9990", r)
 }
 
 func getMeshi(w http.ResponseWriter, r *http.Request) {
-	res, err := exec.Command("meshi").Output()
+	res, err := exec.Command("/opt/local/bin/meshi").Output()
 	if err != nil {
 		log.Fatal(err)
 	}

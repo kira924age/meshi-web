@@ -36,7 +36,7 @@ class Contents extends React.Component {
   }
   handleGetMeshi() {
     axios
-      .get('http://kira924age.com:8080/meshi')
+      .get('/meshi')
       .then((results) => {
         const data = results.data;
         this.setState(state => ({
