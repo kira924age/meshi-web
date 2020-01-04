@@ -34,7 +34,7 @@ export default function MyAppBar() {
             meshi-web
           </Typography>
           <Tooltip title="GitHub Repository">
-            <Link href="#" target='_blank' color='inherit'>
+            <Link href="https://github.com/kira924age/meshi-web" target='_blank' color='inherit'>
               <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
               <GitHubIcon />
               </IconButton>
