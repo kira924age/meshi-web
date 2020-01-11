@@ -30,7 +30,7 @@ class Contents extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      meshi: '',
+      meshi: {},
     };
     // This binding is necessary to make `this` work in the callback
     this.handleGetMeshi = this.handleGetMeshi.bind(this);
@@ -63,7 +63,7 @@ class Contents extends React.Component {
             </Typography>
           </Button>
         </div>
-        <MeshiCard meshi= {this.state.meshi} />
+        <MeshiCard meshi={this.state.meshi} />
       </div>
     );
   }

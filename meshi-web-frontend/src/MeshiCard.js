@@ -20,16 +20,16 @@ const useStyles = makeStyles({
 
 export default function MeshiCard(props) {
   const classes = useStyles();
-  const req = 'https://www.google.com/search?q=調布+' + props.meshi;
+  const req = 'https://www.google.com/search?q=調布+' + props.meshi.title;
   return (
     <Card className={classes.card}>
       <CardActionArea>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {props.meshi}
+            {props.meshi.res}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          description of {props.meshi} 
+          {props.meshi.description}
           </Typography>
         </CardContent>
       </CardActionArea>

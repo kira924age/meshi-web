@@ -1,9 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"os/exec"
+	"strings"
 
 	"github.com/go-chi/chi"
 )
@@ -18,9 +20,14 @@ func main() {
 }
 
 func getMeshi(w http.ResponseWriter, r *http.Request) {
-	res, err := exec.Command("/opt/local/bin/meshi").Output()
+	result, err := exec.Command("/opt/local/bin/meshi").Output()
 	if err != nil {
 		log.Fatal(err)
 	}
-	w.Write(res)
+
+	resultStr := strings.TrimRight(string(result), "\n")
+	jsonBytes := getMeshiByte(resultStr)
+	jsonStr := string(jsonBytes)
+
+	w.Write([]byte(fmt.Sprintf(jsonStr)))
 }
