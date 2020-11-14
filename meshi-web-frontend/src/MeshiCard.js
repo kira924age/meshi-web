@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 
 export default function MeshiCard(props) {
   const classes = useStyles();
-  const req = 'https://www.google.com/search?q=調布+' + props.meshi.title;
+  const req = 'https://duckduckgo.com/?q=調布+' + props.meshi.title;
   return (
     <Card className={classes.card}>
       <CardActionArea>
@@ -36,7 +36,7 @@ export default function MeshiCard(props) {
       <CardActions>
         <Button size="small" color="primary" style={{textTransform:"none"}}>
           <Link href= {req} target='_blank'>
-          Search on Google
+          Search on DuckDuckGo
           </Link>
         </Button>
       </CardActions>
